@@ -1,4 +1,4 @@
-jsximport React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Home, DollarSign, TrendingUp, Calculator } from 'lucide-react';
 
 export default function HomeValuationTool() {
