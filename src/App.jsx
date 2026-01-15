@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+jsximport React, { useState } from 'react';
 import { Home, DollarSign, TrendingUp, Calculator } from 'lucide-react';
 
 export default function HomeValuationTool() {
@@ -252,35 +252,35 @@ export default function HomeValuationTool() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white p-6">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white p-4 sm:p-6">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 pt-8">
-          <div className="mb-6">
-            <h3 className="text-2xl font-light tracking-widest text-lime-400 mb-2" style={{ fontFamily: 'Georgia, serif' }}>
+        <div className="text-center mb-8 sm:mb-12 pt-4 sm:pt-8">
+          <div className="mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-2xl font-light tracking-widest text-lime-400 mb-2" style={{ fontFamily: 'Georgia, serif' }}>
               OVERCREST REALTY
             </h3>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto"></div>
+            <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto"></div>
           </div>
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Home className="w-12 h-12 text-lime-400" strokeWidth={1.5} />
-            <h1 className="text-5xl font-light tracking-tight">Home Valuation</h1>
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <Home className="w-8 h-8 sm:w-12 sm:h-12 text-lime-400" strokeWidth={1.5} />
+            <h1 className="text-3xl sm:text-5xl font-light tracking-tight">Home Valuation</h1>
           </div>
-          <p className="text-emerald-200 text-lg font-light">
+          <p className="text-emerald-200 text-base sm:text-lg font-light px-4">
             Discover your property's market value and equity position
           </p>
         </div>
 
         {/* Lead Capture Form */}
         {showLeadForm ? (
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
-              <h2 className="text-3xl font-light mb-3 text-center">Get Your Free Home Valuation</h2>
-              <p className="text-emerald-200 text-center mb-8 font-light">
+          <div className="max-w-2xl mx-auto px-2 sm:px-0">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
+              <h2 className="text-2xl sm:text-3xl font-light mb-2 sm:mb-3 text-center">Get Your Free Home Valuation</h2>
+              <p className="text-emerald-200 text-center mb-6 sm:mb-8 font-light text-sm sm:text-base">
                 Enter your information to access our instant valuation tool
               </p>
               
-              <form onSubmit={handleLeadFormSubmit} className="space-y-6">
+              <form onSubmit={handleLeadFormSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <label className="block text-emerald-200 mb-2 text-sm font-light">Full Name *</label>
                   <input
@@ -288,7 +288,7 @@ export default function HomeValuationTool() {
                     placeholder="John Smith"
                     value={leadInfo.name}
                     onChange={(e) => setLeadInfo({...leadInfo, name: e.target.value})}
-                    className="w-full px-6 py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light text-base"
                     required
                   />
                 </div>
@@ -300,7 +300,7 @@ export default function HomeValuationTool() {
                     placeholder="(619) 555-0123"
                     value={leadInfo.phone}
                     onChange={(e) => setLeadInfo({...leadInfo, phone: e.target.value})}
-                    className="w-full px-6 py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light text-base"
                     required
                   />
                 </div>
@@ -312,19 +312,19 @@ export default function HomeValuationTool() {
                     placeholder="john@example.com"
                     value={leadInfo.email}
                     onChange={(e) => setLeadInfo({...leadInfo, email: e.target.value})}
-                    className="w-full px-6 py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light text-base"
                     required
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full px-8 py-5 bg-gradient-to-r from-lime-400 to-lime-500 text-emerald-900 rounded-xl text-lg font-semibold hover:from-lime-300 hover:to-lime-400 transition-all shadow-lg hover:shadow-lime-400/25"
+                  className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-lime-400 to-lime-500 text-emerald-900 rounded-xl text-base sm:text-lg font-semibold hover:from-lime-300 hover:to-lime-400 transition-all shadow-lg hover:shadow-lime-400/25"
                 >
                   Continue to Valuation Tool
                 </button>
                 
-                <p className="text-emerald-200/70 text-xs text-center font-light">
+                <p className="text-emerald-200/70 text-xs text-center font-light px-2">
                   By continuing, you agree to receive communications from Overcrest Realty about your property valuation and related services.
                 </p>
               </form>
@@ -333,17 +333,17 @@ export default function HomeValuationTool() {
         ) : (
           <>
             {/* Address Lookup */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white/20 shadow-2xl">
-          <h2 className="text-2xl font-light mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-lime-400/20 flex items-center justify-center text-lime-400 text-sm">1</span>
-            Property Address
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-8 mb-6 sm:mb-8 border border-white/20 shadow-2xl">
+          <h2 className="text-xl sm:text-2xl font-light mb-4 sm:mb-6 flex items-center gap-2">
+            <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-lime-400/20 flex items-center justify-center text-lime-400 text-sm">1</span>
+            <span className="text-base sm:text-2xl">Property Address</span>
           </h2>
           <div className="relative">
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <div className="flex-1 relative">
                 <input
                   type="text"
-                  placeholder="Enter your full address (e.g., 123 Main St, San Diego, CA 92101)"
+                  placeholder="Enter your full address..."
                   value={address}
                   onChange={(e) => handleAddressChange(e.target.value)}
                   onFocus={() => address.length >= 2 && fetchAddressSuggestions(address)}
@@ -354,24 +354,24 @@ export default function HomeValuationTool() {
                       fetchPropertyData();
                     }
                   }}
-                  className="w-full px-6 py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-emerald-950/50 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400/50 text-white placeholder-emerald-300/50 font-light text-sm sm:text-base"
                 />
                 
                 {/* Autocomplete Dropdown */}
                 {showSuggestions && addressSuggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-emerald-900/95 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl z-50 overflow-hidden">
-                    <div className="px-6 py-3 bg-lime-400/10 border-b border-white/10">
-                      <p className="text-xs text-emerald-200 font-light">Suggestions (or just type your full address)</p>
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-emerald-900/98 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl z-50 overflow-hidden max-h-64 overflow-y-auto">
+                    <div className="px-4 sm:px-6 py-2 sm:py-3 bg-lime-400/10 border-b border-white/10">
+                      <p className="text-xs text-emerald-200 font-light">Suggestions (or type your full address)</p>
                     </div>
                     {addressSuggestions.map((suggestion, index) => (
                       <button
                         key={index}
                         onClick={() => selectAddress(suggestion)}
-                        className="w-full text-left px-6 py-4 hover:bg-lime-400/20 transition-colors border-b border-white/10 last:border-0 text-white font-light"
+                        className="w-full text-left px-4 sm:px-6 py-3 sm:py-4 hover:bg-lime-400/20 transition-colors border-b border-white/10 last:border-0 text-white font-light text-sm sm:text-base"
                       >
-                        <div className="flex items-center gap-3">
-                          <Home className="w-4 h-4 text-lime-400 flex-shrink-0" />
-                          <span>{suggestion}</span>
+                        <div className="flex items-center gap-2 sm:gap-3">
+                          <Home className="w-3 h-3 sm:w-4 sm:h-4 text-lime-400 flex-shrink-0" />
+                          <span className="break-words">{suggestion}</span>
                         </div>
                       </button>
                     ))}
@@ -382,14 +382,14 @@ export default function HomeValuationTool() {
               <button
                 onClick={fetchPropertyData}
                 disabled={loading || !address}
-                className="px-8 py-4 bg-gradient-to-r from-lime-400 to-lime-500 text-emerald-900 rounded-xl font-semibold hover:from-lime-300 hover:to-lime-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-lime-400/25"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-lime-400 to-lime-500 text-emerald-900 rounded-xl font-semibold hover:from-lime-300 hover:to-lime-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-lime-400/25 text-sm sm:text-base whitespace-nowrap"
               >
                 {loading ? 'Loading...' : 'Get Valuation'}
               </button>
             </div>
           </div>
-          <p className="text-emerald-200/70 text-sm mt-3 font-light">
-            Type or paste your complete address, then click "Get Valuation" (autocomplete suggestions are optional)
+          <p className="text-emerald-200/70 text-xs sm:text-sm mt-3 font-light">
+            Type or paste your complete address, then click "Get Valuation"
           </p>
         </div>
 
@@ -629,7 +629,7 @@ export default function HomeValuationTool() {
               <p className="text-emerald-200 mb-6 font-light">
                 Get a professional consultation and personalized market strategy
               </p>
-              <a
+              
                 href="tel:+16192889363"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-lime-400 to-lime-500 text-emerald-900 rounded-xl text-lg font-semibold hover:from-lime-300 hover:to-lime-400 transition-all shadow-lg hover:shadow-lime-400/25"
               >
